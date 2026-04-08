@@ -1,0 +1,30 @@
+.detail-wrap {
+  margin-top: 14px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.detail-card {
+  max-width: 560px;
+  background: #fff8eb;
+  border: 1px solid #ad7c49;
+}
+
+.detail-card img {
+  max-height: 520px;
+  object-fit: cover;
+}
+
+.detail-card mat-card-title {
+  color: #5e2f11;
+}
+
+.detail-card p {
+  color: #2f2418;
+  margin: 7px 0;
+}
+
+.mini-note {
+  color: #f7f1df;
+}

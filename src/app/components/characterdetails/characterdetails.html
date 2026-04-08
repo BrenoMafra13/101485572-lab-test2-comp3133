@@ -1,0 +1,35 @@
+<section class="detail-wrap">
+  <a mat-button routerLink="/characterlist">Back to List</a>
+
+  @if (stillLoad()) {
+    <p class="mini-note">Loading details...</p>
+  }
+
+  @if (!stillLoad() && oneChar(); as gotOne) {
+    <mat-card class="detail-card">
+      @if (gotOne.image) {
+        <img mat-card-image [src]="gotOne.image" [alt]="gotOne.name" />
+      }
+
+      <mat-card-header>
+        <mat-card-title>{{ gotOne.name }}</mat-card-title>
+        <mat-card-subtitle>{{ gotOne.house || 'No House' }}</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <p><strong>Species:</strong> {{ gotOne.species || 'Unknown' }}</p>
+        <p><strong>House:</strong> {{ gotOne.house || 'Unknown' }}</p>
+        <p><strong>Wizard:</strong> {{ gotOne.wizard ? 'Yes' : 'No' }}</p>
+        <p><strong>Ancestry:</strong> {{ gotOne.ancestry || 'Unknown' }}</p>
+        <p><strong>Wand Wood:</strong> {{ gotOne.wand?.wood || 'Unknown' }}</p>
+        <p><strong>Wand Core:</strong> {{ gotOne.wand?.core || 'Unknown' }}</p>
+        <p><strong>Wand Length:</strong> {{ gotOne.wand?.length ?? 'Unknown' }}</p>
+        <p><strong>Actor:</strong> {{ gotOne.actor || 'Unknown' }}</p>
+      </mat-card-content>
+    </mat-card>
+  }
+
+  @if (!stillLoad() && !oneChar()) {
+    <p class="mini-note">Character not found.</p>
+  }
+</section>

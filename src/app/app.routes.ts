@@ -1,19 +1,19 @@
 import { Routes } from '@angular/router';
-import { CharsBoxComponent } from './components/chars-box/chars-box';
-import { HousesBoxComponent } from './components/houses-box/houses-box';
+import { CharacterlistComponent } from './components/characterlist/characterlist';
+import { CharacterdetailsComponent } from './components/characterdetails/characterdetails';
 
 export const routes: Routes = [
 	{
 		path: '',
-		redirectTo: 'characters',
+		redirectTo: 'characterlist',
 		pathMatch: 'full'
 	},
 	{
-		path: 'characters',
-		component: CharsBoxComponent
+		path: 'characterlist',
+		component: CharacterlistComponent
 	},
 	{
-		path: 'houses',
-		component: HousesBoxComponent
+		path: 'characterdetails/:id',
+		component: CharacterdetailsComponent
 	}
 ];

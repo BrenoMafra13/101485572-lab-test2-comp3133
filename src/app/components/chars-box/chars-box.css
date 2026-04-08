@@ -38,9 +38,23 @@
   box-shadow: inset 0 0 0 2px rgba(177, 104, 45, 0.4), 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.char-pic {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ad7c49;
+  margin-bottom: 9px;
+}
+
 .one-card h3 {
   margin: 0 0 8px;
   color: #6e3314;
+}
+
+.one-card p {
+  margin: 5px 0;
+  color: #2a1909;
 }
 
 .small-note {

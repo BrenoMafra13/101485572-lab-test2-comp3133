@@ -1,0 +1,10 @@
+<div class="pick-shell">
+  <mat-form-field appearance="fill" class="pick-box" subscriptSizing="dynamic">
+    <mat-label>Filter by house</mat-label>
+    <mat-select [formControl]="homePick">
+      @for (oneHouse of homeOps; track oneHouse) {
+        <mat-option [value]="oneHouse">{{ oneHouse }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+</div>

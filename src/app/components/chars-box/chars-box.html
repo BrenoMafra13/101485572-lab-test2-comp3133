@@ -22,8 +22,18 @@
   <div class="gridy-cards">
     @for (wiz of (listyChars() | charFind : textSeek : housePick.value); track wiz.name) {
       <article class="one-card">
+        @if (wiz.image) {
+          <img [src]="wiz.image" [alt]="wiz.name" class="char-pic" />
+        }
+
         <h3>{{ wiz.name }}</h3>
+        <p><strong>Species:</strong> {{ wiz.species || 'Unknown' }}</p>
         <p><strong>House:</strong> {{ wiz.house || 'Unknown' }}</p>
+        <p><strong>Wizard:</strong> {{ wiz.wizard ? 'Yes' : 'No' }}</p>
+        <p><strong>Ancestry:</strong> {{ wiz.ancestry || 'Unknown' }}</p>
+        <p><strong>Wand Wood:</strong> {{ wiz.wand?.wood || 'Unknown' }}</p>
+        <p><strong>Wand Core:</strong> {{ wiz.wand?.core || 'Unknown' }}</p>
+        <p><strong>Wand Length:</strong> {{ wiz.wand?.length ?? 'Unknown' }}</p>
         <p><strong>Actor:</strong> {{ wiz.actor || 'Unknown' }}</p>
       </article>
     }

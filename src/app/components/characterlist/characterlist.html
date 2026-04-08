@@ -1,0 +1,56 @@
+<section class="list-wrap">
+  <div class="head-row">
+    <h2>Character List</h2>
+    <app-characterfilter (chosenHouse)="onHousePick($event)" />
+  </div>
+
+  @if (stillLoad()) {
+    <p class="mini-note">Loading characters...</p>
+  }
+
+  <div class="card-grid">
+    @for (oneChar of showPeeps(); track oneChar.id ?? oneChar.name) {
+      <mat-card class="char-card">
+        @if (oneChar.image) {
+          <img mat-card-image [src]="oneChar.image" [alt]="oneChar.name" />
+        }
+
+        <mat-card-header>
+          <mat-card-title>{{ oneChar.name }}</mat-card-title>
+          <mat-card-subtitle>{{ oneChar.house || 'No House' }}</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-actions>
+          @if (oneChar.id) {
+            <a mat-flat-button routerLink="/characterdetails/{{ oneChar.id }}">View Details</a>
+          }
+        </mat-card-actions>
+      </mat-card>
+    }
+  </div>
+
+  <section class="homes-box">
+    <h2>Houses</h2>
+
+    @if (homesLoad()) {
+      <p class="mini-note">Loading houses...</p>
+    }
+
+    <div class="homes-grid">
+      @for (oneHome of homeList(); track oneHome.id ?? oneHome.name) {
+        <mat-card class="home-card">
+          <mat-card-header>
+            <mat-card-title>{{ oneHome.name }}</mat-card-title>
+            <mat-card-subtitle>{{ oneHome.houseColours }}</mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-content>
+            <p><strong>Founder:</strong> {{ oneHome.founder }}</p>
+            <p><strong>Animal:</strong> {{ oneHome.animal }}</p>
+            <p><strong>Ghost:</strong> {{ oneHome.ghost }}</p>
+          </mat-card-content>
+        </mat-card>
+      }
+    </div>
+  </section>
+</section>

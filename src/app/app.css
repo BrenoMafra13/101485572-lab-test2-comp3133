@@ -9,6 +9,7 @@
 	padding: 28px;
 	color: var(--ink-main);
 	font-family: 'Trebuchet MS', 'Gill Sans', sans-serif;
+	display: block;
 	background:
 		radial-gradient(circle at 8% 12%, rgba(255, 255, 255, 0.2), transparent 26%),
 		radial-gradient(circle at 92% 84%, rgba(255, 255, 255, 0.16), transparent 24%),
@@ -27,12 +28,20 @@
 	border-radius: 14px;
 	padding: 14px 18px;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+	max-width: 1200px;
+	margin: 0 auto 18px;
 }
 
 .top-box h1 {
 	margin: 0;
 	letter-spacing: 0.6px;
 	font-size: 1.6rem;
+}
+
+.title-wrap p {
+	margin: 4px 0 0;
+	font-size: 0.92rem;
+	color: #6a4b2b;
 }
 
 .menu-links {
@@ -55,6 +64,11 @@
 .menu-links a:hover {
 	transform: translateY(-1px);
 	box-shadow: 0 6px 14px rgba(66, 36, 10, 0.35);
+}
+
+.menu-links a:focus-visible {
+	outline: 2px solid #0f2f32;
+	outline-offset: 2px;
 }
 
 @media (max-width: 640px) {
