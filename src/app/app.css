@@ -1,0 +1,68 @@
+.page-wrap {
+	--bg-deep: #0f2f32;
+	--bg-mid: #1a4a4f;
+	--paper-main: #f7f1df;
+	--ink-main: #1f1a16;
+	--copper: #b1682d;
+	--copper-dark: #7a4317;
+	min-height: 100vh;
+	padding: 28px;
+	color: var(--ink-main);
+	font-family: 'Trebuchet MS', 'Gill Sans', sans-serif;
+	background:
+		radial-gradient(circle at 8% 12%, rgba(255, 255, 255, 0.2), transparent 26%),
+		radial-gradient(circle at 92% 84%, rgba(255, 255, 255, 0.16), transparent 24%),
+		linear-gradient(160deg, var(--bg-deep), var(--bg-mid));
+}
+
+.top-box {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 18px;
+	flex-wrap: wrap;
+	margin-bottom: 18px;
+	background: linear-gradient(135deg, var(--paper-main), #e7ddc2);
+	border: 2px solid var(--copper);
+	border-radius: 14px;
+	padding: 14px 18px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+}
+
+.top-box h1 {
+	margin: 0;
+	letter-spacing: 0.6px;
+	font-size: 1.6rem;
+}
+
+.menu-links {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.menu-links a {
+	text-decoration: none;
+	background: linear-gradient(180deg, var(--copper), var(--copper-dark));
+	color: #fff8ed;
+	border: 1px solid #592f0f;
+	border-radius: 999px;
+	padding: 8px 14px;
+	font-size: 0.95rem;
+	transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.menu-links a:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 6px 14px rgba(66, 36, 10, 0.35);
+}
+
+@media (max-width: 640px) {
+	.page-wrap {
+		padding: 16px;
+	}
+
+	.top-box h1 {
+		font-size: 1.3rem;
+	}
+}

@@ -1,0 +1,38 @@
+.blocky-wrap {
+  margin-top: 16px;
+}
+
+.blocky-wrap h2 {
+  margin: 0 0 10px;
+  color: #f7f1df;
+  letter-spacing: 0.8px;
+}
+
+.gridy-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.one-card {
+  border: 2px dashed #10393d;
+  border-radius: 12px;
+  background: linear-gradient(160deg, #fff8e6, #ecd8ad);
+  padding: 13px;
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.18);
+}
+
+.one-card h3 {
+  margin: 0 0 8px;
+  color: #4f2b10;
+}
+
+.taggy {
+  display: inline-block;
+  margin: 4px 0 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #0e3b40;
+  color: #f9f4e8;
+  font-size: 0.84rem;
+}

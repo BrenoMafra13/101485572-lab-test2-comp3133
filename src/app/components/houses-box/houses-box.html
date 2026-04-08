@@ -1,0 +1,33 @@
+<section class="blocky-wrap">
+  <h2>Houses</h2>
+
+  <div class="gridy-cards">
+    @for (home of listyHomes(); track home.name) {
+      <article class="one-card">
+        <h3>{{ home.name }}</h3>
+
+        @switch (home.name) {
+          @case ('Gryffindor') {
+            <p class="taggy">Bravery</p>
+          }
+          @case ('Slytherin') {
+            <p class="taggy">Ambition</p>
+          }
+          @case ('Hufflepuff') {
+            <p class="taggy">Loyalty</p>
+          }
+          @case ('Ravenclaw') {
+            <p class="taggy">Wisdom</p>
+          }
+          @default {
+            <p class="taggy">Magic</p>
+          }
+        }
+
+        <p><strong>Founder:</strong> {{ home.founder }}</p>
+        <p><strong>Animal:</strong> {{ home.animal }}</p>
+        <p><strong>Ghost:</strong> {{ home.ghost }}</p>
+      </article>
+    }
+  </div>
+</section>
