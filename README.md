@@ -1,59 +1,60 @@
-# HpThemeApp
+# Test Version 2b - Harry Potter Theme
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.7.
+## Student Information
+- Name: Breno Lopes Mafra
+- ID: 101485572
 
-## Development server
+## App Description
+This Angular app fetches and displays Harry Potter related data from public APIs.
+The project includes character and house data screens, search and filter controls,
+and Angular modern template syntax.
 
-To start a local development server, run:
+## Features Implemented
+- Angular latest project setup
+- HTTP data fetching with `HttpClientModule`
+- `FormsModule` and `ReactiveFormsModule` usage
+- Service layer for API calls
+- TypeScript interfaces/models
+- Custom pipe for character filtering
+- At least 2 components:
+	- Characters page
+	- Houses page
+- Search and filter feature on characters page
+- Angular template features:
+	- `@for`
+	- `@if`
+	- `@switch`
+	- `signal`
+- Basic custom styling
 
-```bash
-ng serve
-```
+## API Sources
+- Characters: `https://hp-api.onrender.com/api/characters`
+- Houses: `https://wizard-world-api.herokuapp.com/Houses`
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## How to Run the Project
+1. Install dependencies:
 
 ```bash
-ng test
+npm install
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+2. Start development server:
 
 ```bash
-ng e2e
+npm start
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+3. Open in browser:
 
-## Additional Resources
+```text
+http://localhost:4200/
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Build Command
+```bash
+npm run build
+```
+
+## Submission Notes
+- GitHub repository link: https://github.com/BrenoMafra13/101485572-lab-test2-comp3133
+- Deployment link: https://101485572-lab-test2-comp3133-production.up.railway.app/
