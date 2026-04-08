@@ -1,12 +1,26 @@
 <section class="blocky-wrap">
   <h2>Characters</h2>
 
+  <div class="mini-tools">
+    <input
+      type="text"
+      placeholder="Search by character or actor"
+      [(ngModel)]="textSeek"
+    />
+
+    <select [formControl]="housePick">
+      @for (oneOpt of houseOps; track oneOpt) {
+        <option [value]="oneOpt">{{ oneOpt }}</option>
+      }
+    </select>
+  </div>
+
   @if (busyLoad()) {
     <p class="small-note">Loading characters...</p>
   }
 
   <div class="gridy-cards">
-    @for (wiz of listyChars(); track wiz.name) {
+    @for (wiz of (listyChars() | charFind : textSeek : housePick.value); track wiz.name) {
       <article class="one-card">
         <h3>{{ wiz.name }}</h3>
         <p><strong>House:</strong> {{ wiz.house || 'Unknown' }}</p>
@@ -14,4 +28,8 @@
       </article>
     }
   </div>
+
+  @if (!busyLoad() && (listyChars() | charFind : textSeek : housePick.value).length === 0) {
+    <p class="small-note">No character found with this filter.</p>
+  }
 </section>

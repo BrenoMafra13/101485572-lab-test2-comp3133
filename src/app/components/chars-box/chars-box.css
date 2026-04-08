@@ -8,6 +8,22 @@
   letter-spacing: 0.8px;
 }
 
+.mini-tools {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) 180px;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.mini-tools input,
+.mini-tools select {
+  border: 1px solid #9d6432;
+  border-radius: 8px;
+  padding: 9px 10px;
+  background: #fff6e0;
+  color: #321b09;
+}
+
 .gridy-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -29,4 +45,10 @@
 
 .small-note {
   color: #f1e5cb;
+}
+
+@media (max-width: 640px) {
+  .mini-tools {
+    grid-template-columns: 1fr;
+  }
 }

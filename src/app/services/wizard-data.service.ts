@@ -9,13 +9,14 @@ import { HpHouse } from '../models/hp-house';
 })
 export class WizardDataService {
   private httpOne = inject(HttpClient);
-  private hostBase = 'https://hp-api.onrender.com/api';
+  private charsBase = 'https://hp-api.onrender.com/api';
+  private housesBase = 'https://wizard-world-api.herokuapp.com';
 
   getAllChars(): Observable<HpCharacter[]> {
-    return this.httpOne.get<HpCharacter[]>(`${this.hostBase}/characters`);
+    return this.httpOne.get<HpCharacter[]>(`${this.charsBase}/characters`);
   }
 
   getAllHomes(): Observable<HpHouse[]> {
-    return this.httpOne.get<HpHouse[]>(`${this.hostBase}/houses`);
+    return this.httpOne.get<HpHouse[]>(`${this.housesBase}/Houses`);
   }
 }
